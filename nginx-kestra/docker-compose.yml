@@ -69,7 +69,7 @@ services:
         kestra:
           server:
             basic-auth:
-              enabled: true
+              enabled: false
               username: admin
               password: kestra
           repository:
