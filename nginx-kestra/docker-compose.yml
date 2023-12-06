@@ -44,7 +44,9 @@ services:
       retries: 10
 
   kestra:
-    image: kestra/kestra:v0.13.4
+    image: kestra/kestra:v0.13.4-full
+    env_file:
+      - env/.env_encoded
     pull_policy: always
     entrypoint: /bin/bash
     # Note that this is meant for development only. Refer to the documentation for production deployments of Kestra which runs without a root user.
